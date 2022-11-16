@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\app\Http\Controller\PrincipalController;
 
 
-class User extends Model
+class Usuarios extends Model
 {
     protected $table="usuarios";
     protected $primarykey="id";

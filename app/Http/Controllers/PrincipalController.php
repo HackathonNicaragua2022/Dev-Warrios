@@ -3,12 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\Usuario;
+use App\Models\Usuario;
 
 class PrincipalController extends Controller
 {
     public function home(){
         return view("secciones.index");
+    }
+
+    public function store(Request $request){
+    $registro = usuario::create([
+        'nombre' = $requests['nombre'],
+        'registro' = $request['password'],
+    ]);
+
+    $registro->save();
+
+    return view("secciones.index");
+    }
+
+    public function login(){
+        return view("secciones.galeria");
     }
 
     public function galeria(){
@@ -21,13 +36,6 @@ class PrincipalController extends Controller
 
     public function nosotros(){
         return view("secciones.about");
-    }
-
-    public function ingresar(){
-        $nombre = $_POST['nombre'];
-        $email = $_POST['email'];
-
-        return "datos ingresados" . $nombre . " " . $email;
     }
 
     public function contacto(){

@@ -36,7 +36,7 @@
       <a href="/galeria">Galeria</a>
       <a href="/mapa">Mapa</a>
       <a href="/nosotros">Nosotros</a>
-      <a href="/login">Log In</a>
+      <a href="/auth">Log In</a>
     </nav>
     </header>
 
