@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\Models\Usuario;
 
 class PrincipalController extends Controller
 {
@@ -23,7 +24,10 @@ class PrincipalController extends Controller
     }
 
     public function ingresar(){
-        return view("secciones.login");
+        $nombre = $_POST['nombre'];
+        $email = $_POST['email'];
+
+        return "datos ingresados" . $nombre . " " . $email;
     }
 
     public function contacto(){

@@ -15,6 +15,7 @@
     @vite('resources/css/mapa.css')
     @vite('resources/css/contacto.css')
     @vite('resources/css/about.css')
+    @vite('resources/css/galeria.css')
 
     <!--Llamada a los archivos js-->
     @vite('resources/js/login.js')
@@ -27,9 +28,8 @@
 
 <body>
     <header>
-      <a href="http://127.0.0.1:5500/Hackaton/Index.html"  class="logo">
-        <img src="ICONS\logo.png" alt="logo de la empresa">
-        <h2 class="nombre-empresa">NeoNica360</h2>
+      <a href="/home"  class="logo">
+        <img src="img/logo.png" alt="logo de la empresa">
     </a>
     <nav>
       <a href="/home">Inicio</a>
