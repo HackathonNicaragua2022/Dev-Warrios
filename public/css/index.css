@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    padding-top: 10px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    
+    position: absolute;
+    font-size: 1.6rem;
+    
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: arial;
+    font-size: 18px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  
+  
+  *{
+  
+    margin: 0;
+    padding: 0;
+  }
+  .text-left{
+     text-align: left;
+  }
+  .text-center{
+     text-align: center;
+  }
+  .text-right{
+     text-align: right;
+  }
+  .clear::after{
+    content:"";
+    clear: both;
+    display: block;
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  img{
+    max-width: 100%;
+  }
+  a{
+    text-decoration: none;
+  }
+  .mid-contant{
+    max-width: 1300px;
+    margin: auto;
+  }
+  p-bg{
+    background: #f7f7f7;
+  }
+  /*Start main css*/
+  .main-header{
+    background: #ddd;
+    border-bottom: 1px solid rgb(194, 188, 188);
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .logo{
+    width: 30%;
+    padding-top: 10px;
+  }
+  .manu{
+    width: 60%;
+  }
+  .button{
+    width: 10%;
+  }
+  .logo img{
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+  }
+  .logo span{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 500px;
+  }
+  
+  .manu ul li{
+    display: inline-block;
+  }
+  .manu ul li{
+    position: relative;
+  }
+  .manu ul li ul{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    background:#fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    transform: scaleY(0);
+    transform-origin: top center;
+    margin-top: 2px;
+  }
+  .manu ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    z-index: 10;
+  
+  }
+  .manu ul ul li a:hover{
+    background: rgb(212, 204, 204);
+    width: 160px;
+  
+  }
+  
+  .manu ul ul li a{
+    line-height: 60px;
+  }
+  .manu ul li a{
+    display: block;
+    padding: 0px 20px;
+    line-height: 99px;
+    font-size: 17px;
+    font-size: 20px;
+  }
+  
+  .btn{
+    line-height: 40px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+  .btn a{
+    padding: 0px 10px;
+   
+    border: 1px solid black;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  /*banner*/
+  .banner{
+  background: url(https://i.postimg.cc/yYnDpjBY/photo-2022-11-25-16-54-19.jpgauto=format&fit=crop&w=745&q=80) no-repeat center center;
+  background-size: cover;
+  padding: 200px 0;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+    
+  }
+  
+  .banner::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0,0,.5);
+    z-index: -1;
+  
+  }
+  .banner-contant h3{
+    font-size: 30px;
+   font-size: 1.6rem;
+    
+    
+  }
+  .banner-contant h2{
+    font-size: 60px;
+    margin: 30px 0px;
+  
+  }
+  .defoult-btn{
+    color: rgb(87, 79, 79);
+    padding: 20px 30px;
+    background: #fff;
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 600px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+    transition: .3
+  }

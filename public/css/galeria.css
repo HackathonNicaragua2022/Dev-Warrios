@@ -1,0 +1,34 @@
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+.gallery-images-section {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(200px, 1fr));
+	grid-gap: 0;
+	width: 100%;
+	box-sizing: border-box;
+	box-sizing: content-box;
+	overflow: hidden;
+}
+
+.gallery-section2 .gallery-images-section {
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gallery-img-wrap {
+	height: 200px;
+	width: 341px;
+	box-sizing: content-box;
+	overflow: hidden;
+}
