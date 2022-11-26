@@ -1,49 +1,69 @@
 @extends('layouts.app')
 
 @section('content')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
+<body background="img/foto.jpg">	
+  
+   
 
-<body>
-    <div class="container">
-        <div class="row header">
-          <h1>CONTACT US &nbsp;</h1>
-          <h3>Fill out the form below to learn more!</h3>
-        </div>
-        <div class="row body">
-          <form action="#">
-            <ul>
-              
-              <li>
-                <p class="left">
-                  <label for="first_name">first name</label>
-                  <input type="text" name="first_name" placeholder="John" />
-                </p>
-                <p class="pull-right">
-                  <label for="last_name">last name</label>
-                  <input type="text" name="last_name" placeholder="Smith" />      
-                </p>
-              </li>
-              
-              <li>
-                <p>
-                  <label for="email">email <span class="req">*</span></label>
-                  <input type="email" name="email" placeholder="john.smith@gmail.com" />
-                </p>
-              </li>        
-              <li><div class="divider"></div></li>
-              <li>
-                <label for="comments">comments</label>
-                <textarea cols="46" rows="3" name="comments"></textarea>
-              </li>
-              
-              <li>
-                <input class="btn btn-submit" type="submit" value="Submit" />
-                <small>or press <strong>enter</strong></small>
-              </li>
-              
-            </ul>
-          </form>  
-        </div>
-      </div>
+	<div class="contact_form">
+
+		<div class="formulario">			
+      <h1>Formulario de contacto</h1>
+				<h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+
+
+					<form action="submeter-formulario.php" method="post">				
+
+						
+								<p>
+									<label for="nombre" class="colocar_nombre">Nombre
+										<span class="obligatorio">*</span>
+									</label>
+										<input type="text" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+								</p>
+							
+								<p>
+									<label for="email" class="colocar_email">Email
+										<span class="obligatorio">*</span>
+									</label>
+										<input type="email" name="email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+								</p>
+						
+								<p>
+									<label for="telefone" class="colocar_telefono">Teléfono
+									</label>
+										<input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
+								</p>		
+							
+								<p>
+									<label for="website" class="colocar_website">Direccion
+									</label>
+										<input type="url" name="direccion" id="website" placeholder="Escribe tu direccion">
+								</p>		
+							
+								<p>
+									<label for="asunto" class="colocar_asunto">Asunto
+										<span class="obligatorio">*</span>
+									</label>
+										<input type="text" name="asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+								</p>		
+							
+								<p>
+									<label for="mensaje" class="colocar_mensaje">Mensaje
+										<span class="obligatorio">*</span>
+									</label>                     
+                               		  <textarea name="mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                               	</p>	  								
+							
+								<button type="submit" name="enviar" id="enviar"><p>Enviar</p></button>
+
+								<p class="aviso">
+									<span class="obligatorio"> * </span>los campos son obligatorios.
+								</p>					
+						
+					</form>
+		</div>	
+	</div>
+
+</body>
 @endsection

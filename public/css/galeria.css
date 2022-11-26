@@ -1,34 +1,121 @@
-*,
-*:before,
-*:after {
-	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
-}
+.lugar .h1{
 
-img {
-	height: auto;
-	/* Make sure images are scaled correctly. */
-	max-width: 100%;
-	/* Adhere to container width. */
-}
+	margin-top: 40px;
+	font-size: 20px;
+	color: rgb(20, 20, 20);
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+   }
 
-.gallery-images-section {
+
+
+
+   .grid-gallery {
+   
+	padding: 701px, 470px;
 	display: grid;
-	grid-template-columns: repeat(4, minmax(200px, 1fr));
-	grid-gap: 0;
+	grid-auto-rows: 200px;
+	gap: 1rem;
+	grid-auto-flow: row dense;
+	margin-top: 70px;
+	 }
+	 
+	 @media all and (min-width: 320px) {
+	.grid-gallery {
+	  grid-template-columns: repeat(1, 1fr);
+	}
+	 }
+	 
+	 @media all and (min-width: 768px) {
+	.grid-gallery {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+	 }
+	 
+	 @media all and (min-width: 1024px) {
+	.grid-gallery {
+	  grid-template-columns: repeat(6, 1fr);
+	}
+	 }
+	 
+	 .grid-gallery__item:nth-child(11n+1) {
+	grid-column: span 1;
+	 }
+	 
+	 .grid-gallery__item:nth-child(11n+4) {
+	grid-column: span 2;
+	grid-row: span 1;
+	 }
+	 
+	 .grid-gallery__item:nth-child(11n+6) {
+	grid-column: span 3;
+	grid-row: span 1;
+	 }
+	 
+	 .grid-gallery__item:nth-child(11n+7) {
+	grid-column: span 1;
+	grid-row: span 2;
+	 }
+	 
+	 .grid-gallery__item:nth-child(11n+8) {
+	grid-column: span 2;
+	grid-row: span 2;
+	 }
+	 
+	 .grid-gallery__item:nth-child(11n+9) {
+	grid-row: span 3;
+	 }
+	 
+	 .grid-gallery__image {
 	width: 100%;
-	box-sizing: border-box;
-	box-sizing: content-box;
-	overflow: hidden;
-}
+	height: 100%;
+	object-fit: cover;
+	 }
+   
+   
+   
+	 #map
+	 {
+	background-color: black;
+	margin-top: -200px;
+	  height: 150%;
+	  padding: 245px;
+	  border: 50px;
+	  margin-left: 50%;
+	  width: 50%;
+	  
+	 }
+	 
+	 @media (max-width: 700px){
+	  header{
+	   flex-direction:column ;
+	  }
+	  nav{
+	   padding: 10px 0px;
+	   float: right;
+	   
+	  }
+	  }
+   
+   
+	  .map{
+	 margin-top: 15%;
+	  }
+	  .v2{
+	 margin-top: 20%;
+	  }
+   
+	  
+	  .map2{
+	
+	 margin-top: 2%;
+	  }
 
-.gallery-section2 .gallery-images-section {
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
+	  .contenedor_columna
+	  {
+		column-count:2;
+   	 column-gap: 3em;
+    	column-rule: 1px solid #bbb;
+    	column-width: 140px;
 
-.gallery-img-wrap {
-	height: 200px;
-	width: 341px;
-	box-sizing: content-box;
-	overflow: hidden;
-}
+	  }

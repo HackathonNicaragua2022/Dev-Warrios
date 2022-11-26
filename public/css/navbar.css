@@ -3,12 +3,17 @@
   background-image: linear-gradient(260deg, #2376ae 0%, #1d0057 100%);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
+  display: flex;
+  
+
+  
 }
-a{
+.navbar-nav .nav-link{
   text-decoration: none;
-  color: #f0a000;
+  color: #ffffff;
   margin: 10px;
   font-size: 18px;
+  
 }
 header{
   display: flex;
@@ -22,15 +27,17 @@ header{
   display: flex;
 }
 
-.logo{
+.navbar-brand{
   height: 70px; 
   margin-right: 10px;
+  display: flex;
+  
 }
 
 nav{
   font-weight: 600;
   padding-right: 10px;
-  align-items: center;
+  
 }
 
 nav a:hover{
@@ -44,6 +51,7 @@ nav a:hover{
   }
   nav{
       padding: 10px 0px;
+      
   }
   }
 
